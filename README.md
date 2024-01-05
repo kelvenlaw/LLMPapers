@@ -16,6 +16,13 @@ https://github.com/TencentARC/LLaMA-Pro
 # TinyLlama: An Open-Source Small Language Model
 TinyLlama：开源小型语言模型
 ### 简介
-这是一个紧凑的 1.1B 语言模型，在大约 1 万亿个令牌上预训练了大约 3 个时代。TinyLlama 建立在 Llama 2 的架构和分词器之上，利用开源社区（例如 FlashAttention）贡献的各种进步，实现了更好的计算效率。尽管尺寸相对较小，但TinyLlama在一系列下游任务中表现出了卓越的性能。它的性能明显优于具有同等规模的现有开源语言模型。
+译文：我们提出了TinyLlama，一个紧凑的11亿语言模型，在大约3个时代的大约1万亿个token上进行了预训练。TinyLlama以Llama 2 (Touvron等人，2023b)的架构和标记器为基础，利用开源社区贡献的各种进步(例如，FlashAttention (Dao, 2023))，实现更好的计算效率。尽管它的体积相对较小，但TinyLlama在一系列下游任务中表现出色。它的性能明显优于现有同等大小的开源语言模型。
 ### 代码地址
 https://github.com/jzhang38/TinyLlama
+
+# ODIN: A Single Model for 2D and 3D Perception
+Microsoft、斯坦福大学和CMU推出： ODIN: 用于 2D 和 3D 感知的单一模型
+### 简介
+ScanNet 等当代 3D 感知基准上的先进模型使用并标记数据集提供的 3D 点云，这些点云是通过对感知的多视图 RGB-D 图像进行后处理获得的。它们通常在域内进行训练，放弃了大规模的 2D 预训练，并且优于以 RGB-D 多视图图像为特色的替代方案。使用摆图的方法与后处理的 3D 点云之间的性能差距促使人们相信 2D 和 3D 感知需要不同的模型架构。在本文中，我们挑战了这一观点，并提出了ODIN（Omni-Dimensional INstance segmentation），该模型可以使用在2D内视图和3D跨视图信息融合之间交替的Transformer架构，对2D RGB图像和3D点云进行分割和标记。我们的模型通过所涉及的令牌的位置编码来区分 2D 和 3D 特征操作，这些编码捕获 2D 面片令牌的像素坐标和 3D 特征令牌的 3D 坐标。ODIN 在 ScanNet200、Matterport3D 和 AI2THOR 3D 实例分割基准测试中实现了最先进的性能，并在 ScanNet、S3DIS 和 COCO 上实现了具有竞争力的性能。当使用感应的 3D 点云代替从 3D 网格采样的点云时，它的性能远远优于以前的所有作品。当在可指导的具身智能体架构中用作 3D 感知引擎时，它在 TEACh 对话中的动作基准上设定了新的最先进的技术。
+### 代码地址
+https://odin-seg.github.io
